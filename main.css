@@ -1,0 +1,261 @@
+body{
+    background-color: cadetblue;
+    overflow: hidden;
+    
+}
+
+.grid-container{
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-template-rows: 50px 200px 50px;
+    grid-gap: 100px;
+    grid-template-areas: 
+    "h h h h h h"
+    "f1 f1 i i i i"
+    "f f f f f f";
+}
+
+.header{
+    
+    grid-area: h;
+    
+}
+
+.logo{
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    color: cornsilk;
+    letter-spacing: 0.5em;
+}
+
+.mainnav{
+    position: relative;
+    text-align: right;
+    top: -45px;
+}
+
+.mainnav ul{
+    padding: 0;
+    margin: 0;
+    list-style: none;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: bold;
+    font-size: 20px;
+}
+
+.mainnav li{
+    display: inline;
+}
+
+.mainnav a{
+    text-decoration: none;
+    color: #fff;
+    padding: 0px 35px;
+}
+
+.signup{
+    grid-area: f1;
+
+}
+
+.signup h1{
+    color: white;
+    font-size: 60px;
+    letter-spacing: 5px;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    padding-left: 15px;
+}
+
+.signup p{
+    position: relative;
+    color: white;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-size: 20px;
+    padding-left: 18px;
+    letter-spacing: 5px;
+    top: -60px;
+}
+
+#email{
+    position: relative;
+    top: -30px;
+    left: 20px;
+    height: 30px;
+    border-radius: 10px 0 0 10px;
+    border:white;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 10px;
+}
+
+#submit{
+    position: relative;
+    top: -30px;
+    left: 16px;
+    height: 31px;
+    width: 100px;
+    background-color: tomato;
+    border-radius: 0 10px 10px 0;
+    border:tomato;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    padding-left: 10px;
+}
+
+.main-img{
+    grid-area: i;
+}
+
+.main-img img{
+    position: relative;
+    left: 120px;
+    height: auto;
+    width: auto;
+    border-radius: 10px;
+    opacity: 0.8;
+    transition: .5s ease;
+}
+
+.main-img img:hover{
+    opacity: 1;
+    transition: .5s ease;
+}
+
+
+
+.footer{
+    grid-area: f;
+
+}
+
+#rights{
+    position: relative;
+    top: 150px;
+    padding-left: 5px;
+    font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
+    color: white;
+}
+
+
+
+@media (max-width: 1104px){
+    #email{
+        position: relative;
+        top: -30px;
+        left: 20px;
+        height: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding-left: 10px;
+    }
+    
+    #submit{
+        position: relative;
+        top: -62px;
+        left: 212px;
+        height: 32px;
+        width: 100px;
+        background-color: tomato;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding-left: 10px;
+    }
+
+
+}
+    
+
+
+@media (max-width: 950px){
+
+    body{
+        overflow: hidden;
+    }
+
+    .main-img{
+        display: none;
+    }
+
+    .logo{
+        position: relative;
+        text-align: center;
+    }
+
+    .mainnav{
+        position: relative;
+        text-align: center;
+        top: -15px;
+    }
+    .mainnav a{
+        padding: 5px;
+    }
+
+    .signup h1{
+        position: absolute;
+        text-align: center;
+        left: 50px;
+        
+    }
+
+    .signup p{
+        position: absolute;
+        text-align: center;
+        top: 330px;
+        left: 75px;
+        
+    }
+
+    #email{
+        position: absolute;
+        top: 400px;
+        left: 150px;
+        height: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding-left: 10px;
+    }
+
+
+    #submit{
+        position: absolute;
+        top: 400px;
+        left: 340px;
+        height: 32px;
+        width: 100px;
+        background-color: tomato;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding-left: 10px;
+    }
+
+}
+
+@media (max-width: 550px){
+   
+    .signup h1{
+        display: flex;
+        justify-content: center;
+        align-items: center;        
+    }
+
+    .signup p{   
+        position: absolute;
+        text-align: center;
+        top: 400px;
+        left: 75px;
+    }
+
+    #email{
+        position: absolute;
+        top: 500px;
+        left: 100px;
+        height: 30px;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding-left: 10px;
+    }
+
+
+    #submit{
+        position: absolute;
+        top: 500px;
+        left: 290px;
+        height: 32px;
+        width: 100px;
+        background-color: tomato;
+        font-family: Verdana, Geneva, Tahoma, sans-serif;
+        padding-left: 10px;
+    }
+}
